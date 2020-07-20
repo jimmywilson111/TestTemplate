@@ -1,0 +1,62 @@
+#footer
+    .first-part
+        
+        .footer-nav
+            .menu
+                .menu-item
+                    margin: 1em 0
+                    .menu-item-link
+                        display: block
+                        padding: .5em 2em .5em 0
+                        font: normal 0.75rem $aleo-l
+                        text-transform: uppercase
+                        text-decoration: none
+                        &:hover
+                            color: $gray       
+        .invers-btn
+            margin: .5em 0
+            padding: .7em 3em
+            font: bold 1rem $aleo-b 
+            text-transform: uppercase
+            text-decoration: none
+            text-align: center
+            transition: ease-in 0.3s all     
+            background-color: $white
+            border: 2px solid $black
+            &:hover
+                background-color: $black
+                color: $white               
+    .second-part
+        &::after
+            display: block
+            position: absolute
+            content: ''
+            height: 2px
+            width: 100%
+            left: 0
+            background-color: $gray
+        .site-title
+            .logo
+                margin: .2em 0
+                padding: .3em 1.5em
+                display: block
+                text-decoration: none
+                text-transform: uppercase
+                font: normal 2rem $abrilff
+                border: 2px solid $black
+                transition: ease-in 0.3s all
+                &:hover
+                    background-color: $black
+                    color: $white
+        .info-link-list
+            margin-bottom: .5em
+            .info-link-item
+                text-align: center
+                .info-link
+                    text-decoration: none
+                    color: $gray            
+                    font: normal 1.125rem $roboto
+                    transition: ease-in 0.3s all
+                    &:hover
+                        font-weight: bold
+                        color: $black

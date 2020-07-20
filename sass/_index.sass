@@ -1,0 +1,178 @@
+#hero
+    .hero-slider
+        height: 65vh
+        padding: 0
+        margin: 0
+        overflow: hidden
+        .slide1, .slide2, .slide3
+            @include cover-background
+            background-image: url(../img/slider_bg.png) 
+        .slider-item
+            height: 65vh
+            padding: 0
+            margin: 0
+            display: flex
+            position: relative
+            justify-content: center
+            align-items: center
+        .content 
+            position: relative
+            z-index: 2
+            text-align: center
+        .content.style h2 
+            font: normal 3.75rem $abrilff
+            line-height: 48px     
+            color: $white 
+        .content.style .btn-reg
+            display: inline-flex
+            justify-content: center
+            position: relative
+            padding: 1em 2.5em
+            margin: 3em auto
+            text-transform: uppercase
+            text-decoration: none
+            background-color: $black
+            color: $white
+            font: bold 0.875rem $aleo-b
+            border: 2px solid transparent
+            transition: ease-in 0.3s all 
+            &:hover
+                background-color: $white
+                color: $black
+                border: 2px solid $black
+        .slick-dots 
+            bottom: 29px
+        .slick-dots 
+            li 
+                margin: 0 10px
+                button
+                    &::before
+                        color: $white
+                        font-size: 0.9375rem
+                .slick-active 
+                    button
+                        &::before
+                            color: $white
+#why-use
+    padding: 6.250em 0
+    .why-use-list
+        .why-use-item
+            margin: 0 0 3em 0
+    .badge
+        position: absolute
+        top: 0
+        right: -50px
+        max-width: 180px
+        padding: 10px 
+        margin-top: 30px
+        text-transform: uppercase
+        color: $white
+        background-color: $gray
+        border: 5px solid $white
+        img
+            padding: 0 35px 
+        .solid-wrapper
+            border: 1px solid $white
+            text-align: center
+            span
+                font: normal 4rem $aleo-b
+                letter-spacing: -3.75px
+            p
+                font: normal 0.625rem $aleo-l
+                padding-bottom: 10px
+                letter-spacing: 1px
+#achievments
+    padding: 6.250em 0
+    background-color: $dirty-white
+    .achievments-list
+        padding: 3.750em 0
+        .achievment
+            margin: 0 0 4em 0
+            display: flex
+            svg
+                margin-right: 1em
+                               
+#how-works
+    padding: 6.250em 0
+    ul
+        li
+            margin: 0 0 3em 0
+#about
+    .bg1
+        min-height: 350px
+        background-image: url(../img/bg_1.png)
+        @include cover-background
+    .bg-gray
+        text-align: center
+        background-color: $dirty-white
+        h2
+            margin-top: 3em
+            font: normal 1.5rem $aleo-l
+            line-height: 32px
+        h3
+            margin: 1em 0
+        article
+            width: 75%
+            margin: 0 auto
+            p
+                margin-bottom: 1em
+    .bg3
+        min-height: 350px
+        background-image: url(../img/bg_2.png)
+        @include cover-background
+#testimonials
+    padding: 6.250em 0
+    .section-title
+        text-align: center
+        margin-bottom: 1em
+    .testimonial-list
+        .testimonial
+            text-align: center
+            position: relative
+            padding-bottom: 3em
+            .name
+                font: bold 1rem $aleo-b
+                margin: 1em 0
+            img
+                max-width: 143px
+                max-height: 143px
+                object-fit: cover
+                border-radius: 50%
+                margin: 0 auto
+                filter: grayscale(100%)
+            .descr
+                line-height: 200%
+                margin-bottom: 2em
+            span
+                font: bold 1rem $roboto
+            &::after
+                display: block
+                position: absolute
+                content: ''
+                background-image: url(../img/comas.png)
+                height: 26px
+                width: 40px
+                left: 45%
+                margin-top: 1em 
+#join-us
+    .gray-bg
+        background-color: $dirty-white
+        .content
+            text-align: center
+            padding: 6em 0
+            .section-title
+                padding-bottom: 1.6em
+            .descr
+                margin-bottom: 2em
+            .btn-main
+                margin-top: 2em
+                color: $white
+                font-weight: bold
+                text-decoration: none
+                &:hover
+                    color: $black
+        .bg2
+            min-height: 350px
+            background-image: url(../img/bg_3.png)
+            @include cover-background
+

@@ -1,0 +1,626 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px Century Gothic, arial, Tahoma, sans-serif;
+  color: #333;
+}
+
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, input, textarea {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none;
+}
+
+select, input, textarea {
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+table {
+  border-spacing: 0;
+}
+
+a:link, a:visited {
+  font: 16px Century Gothic, sans-serif;
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: local("Roboto-Light");
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aleo-Bold";
+  src: local("Aleo-Bold");
+  src: url("/fonts/Aleo-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aleo-Light";
+  src: local("Aleo-Light");
+  src: url("/fonts/Aleo-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AbrilFatface-Regular";
+  src: local("AbrilFatface-Regular");
+  src: url("/fonts/AbrilFatface-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-main {
+  padding: 1em 2.5em;
+  text-transform: uppercase;
+  -webkit-transition: ease-in 0.3s all;
+  transition: ease-in 0.3s all;
+  display: inline-block;
+  background-color: #000000;
+  color: #FFFFFF;
+  font: bold 0.875rem "Aleo-Bold", serif;
+  border: 2px solid transparent;
+}
+
+.btn-main:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-title {
+  font: normal 2.5rem "AbrilFatface-Regular", serif;
+}
+
+.section-title span {
+  text-indent: 1.25rem;
+}
+
+.subtitle {
+  font: normal 1.125rem "Aleo-Bold", serif;
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.descr {
+  font: normal 0.875rem "Roboto-Light", sans-serif;
+  color: #898989;
+  line-height: 1.6;
+}
+
+#header {
+  background-color: #FFFFFF;
+}
+
+#header .navigation {
+  overflow: hidden;
+}
+
+#header .navigation .site-title .logo {
+  margin: .2em 0;
+  padding: .3em 1.5em;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: normal 2rem "AbrilFatface-Regular", serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  -webkit-transition: ease-in 0.3s all;
+  transition: ease-in 0.3s all;
+}
+
+#header .navigation .site-title .logo:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+#header .navigation .navbar ul {
+  display: none;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+#header .navigation .navbar ul li {
+  padding: 0 .5em;
+}
+
+#header .navigation .navbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font: "Roboto-Light", sans-serif 0.75rem;
+}
+
+#header .navigation .navbar ul li .dropdown {
+  background-color: #FFFFFF;
+}
+
+#header .navigation .navbar ul li .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#header .navigation .navbar ul li .dropdown .dropbtn {
+  background-color: #FFFFFF;
+  border: none;
+  padding: .2em 1em .2em 0;
+  text-transform: uppercase;
+  font: "Roboto-Light", sans-serif 0.75rem;
+  cursor: pointer;
+}
+
+#header .navigation .navbar ul li .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 130px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#header .navigation .navbar ul li .dropdown .dropdown-content a {
+  display: block;
+  padding: .2em .5em;
+  font: "Aleo-Light", serif 0.75rem;
+  text-transform: none;
+}
+
+#header .navigation .navbar ul li .dropdown .dropdown-content a:hover {
+  background-color: #898989;
+}
+
+#footer .first-part .footer-nav .menu .menu-item {
+  margin: 1em 0;
+}
+
+#footer .first-part .footer-nav .menu .menu-item .menu-item-link {
+  display: block;
+  padding: .5em 2em .5em 0;
+  font: normal 0.75rem "Aleo-Light", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#footer .first-part .footer-nav .menu .menu-item .menu-item-link:hover {
+  color: #898989;
+}
+
+#footer .first-part .invers-btn {
+  margin: .5em 0;
+  padding: .7em 3em;
+  font: bold 1rem "Aleo-Bold", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: ease-in 0.3s all;
+  transition: ease-in 0.3s all;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+}
+
+#footer .first-part .invers-btn:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#footer .second-part::after {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #898989;
+}
+
+#footer .second-part .site-title .logo {
+  margin: .2em 0;
+  padding: .3em 1.5em;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: normal 2rem "AbrilFatface-Regular", serif;
+  border: 2px solid #000000;
+  -webkit-transition: ease-in 0.3s all;
+  transition: ease-in 0.3s all;
+}
+
+#footer .second-part .site-title .logo:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#footer .second-part .info-link-list {
+  margin-bottom: .5em;
+}
+
+#footer .second-part .info-link-list .info-link-item {
+  text-align: center;
+}
+
+#footer .second-part .info-link-list .info-link-item .info-link {
+  text-decoration: none;
+  color: #898989;
+  font: normal 1.125rem "Roboto-Light", sans-serif;
+  -webkit-transition: ease-in 0.3s all;
+  transition: ease-in 0.3s all;
+}
+
+#footer .second-part .info-link-list .info-link-item .info-link:hover {
+  font-weight: bold;
+  color: #000000;
+}
+
+#hero .hero-slider {
+  height: 65vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#hero .hero-slider .slide1, #hero .hero-slider .slide2, #hero .hero-slider .slide3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/slider_bg.png);
+}
+
+#hero .hero-slider .slider-item {
+  height: 65vh;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hero .hero-slider .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#hero .hero-slider .content.style h2 {
+  font: normal 3.75rem "AbrilFatface-Regular", serif;
+  line-height: 48px;
+  color: #FFFFFF;
+}
+
+#hero .hero-slider .content.style .btn-reg {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 1em 2.5em;
+  margin: 3em auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #000000;
+  color: #FFFFFF;
+  font: bold 0.875rem "Aleo-Bold", serif;
+  border: 2px solid transparent;
+  -webkit-transition: ease-in 0.3s all;
+  transition: ease-in 0.3s all;
+}
+
+#hero .hero-slider .content.style .btn-reg:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+#hero .hero-slider .slick-dots {
+  bottom: 29px;
+}
+
+#hero .hero-slider .slick-dots li {
+  margin: 0 10px;
+}
+
+#hero .hero-slider .slick-dots li button::before {
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+}
+
+#hero .hero-slider .slick-dots li .slick-active button::before {
+  color: #FFFFFF;
+}
+
+#why-use {
+  padding: 6.250em 0;
+}
+
+#why-use .why-use-list .why-use-item {
+  margin: 0 0 3em 0;
+}
+
+#why-use .badge {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  max-width: 180px;
+  padding: 10px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #898989;
+  border: 5px solid #FFFFFF;
+}
+
+#why-use .badge img {
+  padding: 0 35px;
+}
+
+#why-use .badge .solid-wrapper {
+  border: 1px solid #FFFFFF;
+  text-align: center;
+}
+
+#why-use .badge .solid-wrapper span {
+  font: normal 4rem "Aleo-Bold", serif;
+  letter-spacing: -3.75px;
+}
+
+#why-use .badge .solid-wrapper p {
+  font: normal 0.625rem "Aleo-Light", serif;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#achievments {
+  padding: 6.250em 0;
+  background-color: #F8F8F8;
+}
+
+#achievments .achievments-list {
+  padding: 3.750em 0;
+}
+
+#achievments .achievments-list .achievment {
+  margin: 0 0 4em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#achievments .achievments-list .achievment svg {
+  margin-right: 1em;
+}
+
+#how-works {
+  padding: 6.250em 0;
+}
+
+#how-works ul li {
+  margin: 0 0 3em 0;
+}
+
+#about .bg1 {
+  min-height: 350px;
+  background-image: url(../img/bg_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#about .bg-gray {
+  text-align: center;
+  background-color: #F8F8F8;
+}
+
+#about .bg-gray h2 {
+  margin-top: 3em;
+  font: normal 1.5rem "Aleo-Light", serif;
+  line-height: 32px;
+}
+
+#about .bg-gray h3 {
+  margin: 1em 0;
+}
+
+#about .bg-gray article {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#about .bg-gray article p {
+  margin-bottom: 1em;
+}
+
+#about .bg3 {
+  min-height: 350px;
+  background-image: url(../img/bg_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#testimonials {
+  padding: 6.250em 0;
+}
+
+#testimonials .section-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#testimonials .testimonial-list .testimonial {
+  text-align: center;
+  position: relative;
+  padding-bottom: 3em;
+}
+
+#testimonials .testimonial-list .testimonial .name {
+  font: bold 1rem "Aleo-Bold", serif;
+  margin: 1em 0;
+}
+
+#testimonials .testimonial-list .testimonial img {
+  max-width: 143px;
+  max-height: 143px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#testimonials .testimonial-list .testimonial .descr {
+  line-height: 200%;
+  margin-bottom: 2em;
+}
+
+#testimonials .testimonial-list .testimonial span {
+  font: bold 1rem "Roboto-Light", sans-serif;
+}
+
+#testimonials .testimonial-list .testimonial::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background-image: url(../img/comas.png);
+  height: 26px;
+  width: 40px;
+  left: 45%;
+  margin-top: 1em;
+}
+
+#join-us .gray-bg {
+  background-color: #F8F8F8;
+}
+
+#join-us .gray-bg .content {
+  text-align: center;
+  padding: 6em 0;
+}
+
+#join-us .gray-bg .content .section-title {
+  padding-bottom: 1.6em;
+}
+
+#join-us .gray-bg .content .descr {
+  margin-bottom: 2em;
+}
+
+#join-us .gray-bg .content .btn-main {
+  margin-top: 2em;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#join-us .gray-bg .content .btn-main:hover {
+  color: #000000;
+}
+
+#join-us .gray-bg .bg2 {
+  min-height: 350px;
+  background-image: url(../img/bg_3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#fullpage .section-nav {
+  position: fixed;
+  z-index: 1000;
+  top: 20%;
+  right: 0;
+  padding-right: 30px;
+}
+
+#fullpage .section-nav li {
+  margin: 1em 0;
+}
+
+#fullpage .section-nav li a {
+  text-decoration: none;
+  font: bold 1rem "Aleo-Bold", serif;
+  color: #000000;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+#fullpage .section-nav li a:hover {
+  color: #898989;
+}
+
+#fullpage .section-nav li .active {
+  margin-left: -30px;
+  position: relative;
+  color: #898989;
+}
+
+#fullpage .section-nav li .active::after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 1px;
+  width: 23px;
+  top: 10px;
+  right: -28px;
+  background-color: #898989;
+}

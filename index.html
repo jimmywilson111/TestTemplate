@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>TestTemplate - Homepage</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="navigation d-flex flex-wrap justify-content-center justify-content-md-between" id="header-nav">
+                <h1 class="site-title">
+                    <a href="index.html" class="logo" aria-label="Site Logo">
+                        Site Logo
+                    </a>
+                </h1>
+                <div class="navbar">
+                    <ul class="nav-list d-flex mt-2">
+                        <li class="nav-item mt-1 px-4">
+                            <a href="#">
+                                <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1268 32 17 17">
+                                    <image
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABLUlEQVQ4T6XTyyrFURTH8Y8JD0GSlJAkRaYM5Qncc0mZUMQDmCK5lEvJ9QG8gciAMlFKBiSewkT7tP/a53QcJ+c/2nvt9f+u3/rttavkf/WYxyAa4tEbLrGBj4L83LYqCU5gF7c4wWM8a8cYejGL40JQBgmAHUzholg1DOMQM7HIT1qAhBaeMVkCkP0wgn004TMLBsg6OtD/i4LC8BXusZhCXrBarNdfoONYRksK+UIPHspU0o1r1FQKuUF1Je2Em1xBcwpZQyf6ymwnGHuHpRRSh2DuNM7+AAVTt9GK9xQS1mEi9yLotMSthBk5wFyak479aAQFqUd4ioltCAq64hgExcGX80Il2b4WCxhAY3xbr/EBbsUWhmKRH1CqpExfc2l5oP9C8kCVQDLQ5jdSKztZkzGJrwAAAABJRU5ErkJggg=="
+                                        width="17" height="17" x="1268" y="32" /></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a href="#">Menu</a>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a href="#">
+                                <svg width="15" height="19" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1418 30 15 19">
+                                    <image
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAATCAYAAABPwleqAAAA8klEQVQ4T+2RIW4CQRSG/zcQFApFCYIbwCzr6BF6AFggqekJ0E1IqjkBBgELvldoXTuz3ABBQhUKRZb3CAlD6LKiNEhGfvm+zOQfQsqZWhuI0CsABYCJ5K2ldZhUKQlmX3Nvp2TIHD91fX81NabEUO8ZppemXzXn/kU8sfYZjEq7rvtOnHzbPhQWba1Ht4tDE0WJpxcA5AD8nPEigC2A9a+bQxMtieTRQYYKlMgDSAYnUajHRCsFPo0mQh8UmmgReLWKE2fGVGOifEfrT8fG1jayIpum580dO3QXcdrXpbF7/Neljt59sH8OFgNYXtke9PIe53SrQEmOpl0AAAAASUVORK5CYII="
+                                        width="15" height="19" x="1418" y="30" /></svg>
+                            </a>
+                            <span>1</span>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <svg width="21" height="19" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1475 31 21 19">
+                                        <image
+                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAATCAYAAAB/TkaLAAAChUlEQVQ4T52TTUgUARTH/292RBPMOlRk6EkkDZsPlw7iIfNYooQs7CxFZQSVJNZFgk5BeIikUIjoi3BnYfGgGd1sO4RI7M5HkoV4MjLyUrKghTPzYgTFtp1t9V3f+/947/3fIxSIxPuZag55t0DcAaACQBZM4+QKt6PHGr8ESSkoEc98aCLyXhEwvBaiR2claemFbe8vcfkSA1eZhVOxpqOZfPq80OTU1C6nrPwTE1+JKcrrXGHCNE8y07D4a6U+0ty8mpvPC40bdjfBa9NURQuaRDdMnSFMxlTpSVFQPWONENFYVJVGg6AJw+5i4g5Nkc8UBzWsl+xhMBaWU4GdZuwTIK9XUxXfxL8i7/i6YT0gYDaqyg8DjTTsywSu11T5WlHQhGG3MfiuOD8XjkQibq4omUyGnNq6NJhuaE3Sm6KgfpFumOMMWiyZn+vZCvaBa7V1QwSuyje6rw2805Hp6d1UWhYnRjUzHgtECx5zDREuAlhYXSmLdbcczhZ9p1sL/VUA3MnAQQK+AetXMVnoEwM79UXMTAnbbhA8ocYFV4ZAy57gLUQlaZaIeFtvqlvWEfbQQ0AXgCUCPjM4S6AKBtcDtI+BURIwpMnyx4JGTaTT5VlBHADQxcB9Kgk91xobv+eK9JmZA7zmniOgF8Bohef0t4fDKxt1m+MnLeuQ42ICAizRdfoi4fByob35uWQ6XemExEF4kMUQ2iOy/HXT/WemuaeU6R2Ap5oq3/sf7J/ODes6gAu/iVvOK8rP9U4Thj3G8GY1Vbm5XeBGvW6YdwhCQ1SVOimesU6D0F+1/KO5tbXV2Sk0lUqJi5V7p8AYIN2wTCLuiyrK250CN3QJ0zzOTIN/AFncBMpxa0oCAAAAAElFTkSuQmCC"
+                                            width="21" height="19" x="1475" y="31" /></svg> Alex
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Setting</a>
+                                    <a href="#">Log out</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="fullpage">
+        <ul class="section-nav d-none d-lg-block">
+            <li>
+                <a class="section-nav-link active" href="#hero">01</a>
+            </li>
+            <li>
+                <a class="section-nav-link" href="#why-use">02</a>
+            </li>
+            <li>
+                <a class="section-nav-link" href="#achievments">03</a>
+            </li>
+            <li>
+                <a class="section-nav-link" href="#how-works">04</a>
+            </li>
+            <li>
+                <a class="section-nav-link" href="#about">05</a>
+            </li>
+            <li>
+                <a class="section-nav-link" href="#testimonials">06</a>
+            </li>
+            <li>
+                <a class="section-nav-link" href="#join-us">07</a>
+            </li>
+        </ul>
+        <section id="hero">
+            <ul class="hero-slider">
+                <li class="slider-item slide1">
+                    <div class="container">
+                        <div class="content style">
+                            <h2 class="section-title">Launching Soon</h2>
+                            <a href="#" class="btn-reg">register interest</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-item slide2">
+                    <div class="container">
+                        <div class="content style">
+                            <h2 class="section-title">Launching Soon</h2>
+                            <a href="#" class="btn-reg">register interest</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="slider-item slide3">
+                    <div class="container">
+                        <div class="content style">
+                            <h2 class="section-title">Launching Soon</h2>
+                            <a href="#" class="btn-reg">register interest</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="why-use">
+            <div class="container">
+                <div class="row justify-content-around">
+                    <div class="col-12 col-md-8 col-lg-5">
+                        <img class="img-fluid mx-auto d-block" src="img/about_img.png" alt="About Us Picture">
+                        <div class="badge d-none d-lg-block mx-auto">
+                            <div class="solid-wrapper">
+                                <img class="img-fluid mx-auto d-block mb-3" src="img/badge_icon.png"
+                                    alt="25 Years Achievment">
+                                <span>25</span>
+                                <p>year of excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="why-use-list col-12 col-md-8 col-lg-5">
+                        <li class="why-use-item">
+                            <h3 class="subtitle">Tableware</h3>
+                            <p class="descr">Browse exciting products from a selection of quality makers, all
+                                in one place</p>
+                        </li>
+                        <li class="why-use-item">
+                            <h3 class="subtitle">Products Just For You</h3>
+                            <p class="descr">Our technology will do all the hard work & recommend products that
+                                fit well with your customer profile, based on what your competition is doing.</p>
+                        </li>
+                        <li class="why-use-item">
+                            <h3 class="subtitle">Test It In Your Store</h3>
+                            <p class="descr">Our test & return feature will make it easy for you to find that
+                                bestseller, delight your customers & keep them coming back for more </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="achievments">
+            <div class="container">
+                <h2 class="section-title">Buying for your store <span class="d-block">has never been easier</span></h2>
+                <ul class="achievments-list row justify-content-between">
+                    <li class="achievment col-sm-12 col-md-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28"
+                            height="40" viewBox="0 0 28 40">
+                            <image id="Векторный_смарт-объект" data-name="Векторный смарт-объект" width="28" height="40"
+                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAoCAYAAADt5povAAAEO0lEQVRYhbWYa4hVVRTHf3OzpyWN2YvopWT0mNhtsjdRlBgViBWUeyohArPSCUkIog8SUtDUOGahUUEauxAs8MMQNFJEMmWy21QGRRIxPajMHhOSVhZr+t+4Tfeec+5Mri/7cs5a63/W3mv919q3g4oSU74SmAtcCJwIHAr8AOwA3gJWB+92lnkrBYwpHw30AjcBB+vxHuBnoBOYpGefAw8G79YX+auVgHUBrwK3AX8A5mxB8O6Q4N0xwLFAjyI8GXg2prx4XBHGlKcBA8As4APgjuDd1gL9R4BlwK/A/ODdpnYjfLgBbE4RmEnw7n7gaeAw4L5Wek0BY8pn68zsaxcG774uAmuQB4DPgEtjyt2VAXVmRwCbgndDFcEsyl1mo6O6uB1Ap/X1qmANsk0/z2gH8Hitb44D8DWtne0AWlHbFn3ULlrw7hvgK53/f2RSsfm45Vzg+wkDxpRnAhcooSwxfgGGgnefjIny21Y+SgFjytcA8yzVgdOAA8ao7Ispf2rAwIbg3UCRv6ZMIwczgM3A5QL5UzVmnLlLqlOB6cBJ8mX0N2jcG7wbbAdwhxyZfAm8ArwcvGtaJjHlK4DrtRMnACPAY8G75aWAMeU1xi7AXuB5Y4/g3XdF29Rga51lhRE8cJBRXfBuYUvAmPIqYLH63JLg3QtVgJoA3wKsUi1an/yng3Q0KNnDlepz1hk2jgeswd8NwDPAFGBp8K6feuEr3ZfpA1ZMFIy/S2Ojttd8Lo0pn04D0/RobBgI3vVOFKwBtFc91bJ4yShgTHmqMmyPtvT/lpXyfaNh1dSKjrMxoVXtTDDKQY0gNpIsMMDz9e6N/RBdXeq+Z9VEV+gr9pfUfc/siCl/YakbvJtSBhZTtrp6CLgamAx8CPSV8adsrdxGajLcXTEyq6u7gVNVX1cZG8WUz6tgaxiTayLcUokpzxFXDgPXAtcBRoM2Tt5b8YN/r4loO2PKZVP4OSriLcDbIvLNejejyFC+O+tbOiyibTrWNUi9gxtB+JjyKSonxL1F0i2MYQPcLkVfZBG8e066l1jrUSfpswYMlJF83ff2mrbIZHaJESKJbRojLxPRLw/exRK7uu8to+cWU7Zx3qbte4J3T5ahxpS36hpwZ/BubYmuZfVqK6HgXVedvNdpXRRTPqpCpHu1/lQCZr4WNWKMAgbvHtUQdBbQXwFwt87u4xK9fvkcEsa/BmFrH3aD7Y4p95U4sq+eF7x7ryC6PmXnznprosmIMR9Yq7lznTp104G2AMi28XEl2IhuXy82BZRB0FZM091wTfDuqYpgd1kiAV2KrGdsBrcaE226fkKZaPK+LikJeCl4t096diQ3q85mi41M3rVhLHj3zljfhXQWU7YL5q3A6Dwi+Q34Ub+PBA5seGdJtD54Z7NMU6n0t0lM+XbgIuBMUdvhemV3C6NGu2VZJhobtRbgL/KiUal/RdjCAAAAAElFTkSuQmCC" />
+                        </svg>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Free For Retailers</h3>
+                            <p class="descr">Sparkinity is completely free for retailers. No markups or fees</p>
+                        </div>
+                    </li>
+                    <li class="achievment col-sm-12 col-md-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37"
+                            height="33" viewBox="0 0 37 33">
+                            <image id="Векторный_смарт-объект" data-name="Векторный смарт-объект" width="37" height="33"
+                                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAhCAYAAABeD2IVAAACnUlEQVRYhe2XPWhUQRSFv2gUC8VCwfiDGgVjoTiOoCmUiIJJFG20cSpNa2EaCSYg2CirjQiCKUQRHQloJSISFNQgWjg7EKuN4g/BdIIoKRIhMngXFn1J3pu3ZoN4YLk7c8/cOTvzZt7ZOuv8BLMM9SLnHTAwC6TtBNaXRQ0YrY7VWBDW+RtB1JxaC0nCvy3KOr+uWrWqIso6vxx4ITE3qrVSZ4FlEmsvyjq/CeiQZoe0aysKKABzgS6JhbwF61Nw/oB1fhGwFdgL7AfuGa0uWOe3A4et82EbHwNFo9W3vybKOn8AMMA2YANQJ6lx4LR8D/EQcEY+E9b5EvA6lDBaPUgzV5btKwI7gCbgE9AD7AMajFZDgSCxQfp7hNck44ppJ0q9Ukarz9b5NuAZsBIYNFr1J/C+AP3W+QXCGwHawvi0c2V60I1Wb4FW4DvQZ51vSeJJf5/wWmVcamQ+fUarQaAdmD/FSStIvl34mRB7JTgZOzxJfljyLqZ41JUArJXT9946vxA4ARwF7gBXQr/kA680U6IaJQZT9gFYEo4/sAU4BQxV8DKLit2+siNoBkaBk8BSiaPSX8nLhDwrFSz0ReC60WpM+i9b568Cx2XFGqepk4hYUTeBbqPVj98TIrDXOn8N2DhjooxWb1JwguBpeUn479HTorx9Ddb53RnHlqZ6n1nnV4ibyILwMifPP+TgAJqNViMJgoJXfwmsjikcRHVGjFsDdIodaak0cmIAn4oJvAR8zCwqQlB58nNi6h4BB41W49b5ecB9cRLnjVbdMbXzPOjBxN0SAeFeCj+wV9q3JR+F6JXi12oFe/IQ2AO8Eof5RCzLWIoSicglSoQtBp4Dm4MbBXYZrb7mqZlblAhbBdwFjhitJvNY6QD8BMhRxRvAIInwAAAAAElFTkSuQmCC" />
+                        </svg>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Maker Stories & Reviews</h3>
+                            <p class="descr">In depth profiles on makers, see who you are buying from and how they rate
+                            </p>
+                        </div>
+                    </li>
+                    <li class="achievment col-sm-12 col-md-4">
+                        <svg width="38" height="31" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1219 1567 38 31">
+                            <image
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAfCAYAAACLSL/LAAACkUlEQVRYR+2Xy2vUUBTGvy8zVZeC7lz5ABeOpEkLgu8HdFXFVWAyUqkbXQh15eM/aOnGLqy66WKcZkRw0UVBRLQgImozSWoRSysKuhMEwW50JkdSmGHapm0ykylVepf3nnO+3/1ucnJDrDAeTU9vqfwpPxZB90oxTc5/JeV4VtO+hNVh2KSIsOi4owCzEMyQ/NgkxKJ0AbYDcgLAbBr+EUPXvy+tHwpm2c5tkH0A3qb9cpfR2fkzUTARWo43TOCKAO8qKZ7qUdX5eo1lYKMl9waB/lZBVcWDU6nBCZ62bU2fNTKZ39X1RWCW7faCGAHwPu2XjyXt1FLX6+EAKWa19hxJCeJqYAXb7VaIMQg+pOmfDjv3JI8zzDmIDJkd2rUaWNFxDovwGQSf1hNqMdxUgRATwC1Tb++n5boH4OMlgG2k9Amw7A1phVPLaoqSAvwBgHshuESr5L4AcHJdxKOLlGmVvImgpwilN3pe6yLp8yaI/TUwU28P7WmtQwivXDVqEyyq8/+vY8WSd05ECkJezelqPqoja8U15ZhluwaIAoAy4J8xdf31WoJR1xsGG3WcHIV5COYBnjc71OdRRaPENQRm2e5lEMMAftFnV7ZTfRNFLE5MbLBiyQ3uTncXRATjApmMIxjEKlR+pOZm7hiGUVkpNzaYVXLmFr5jTY5yint6VPVzYmDFSe+QKBgHZAeA+0K51wDjfE7TZlfLi+1YUKwwOXVQUfzgYd8JynVT0wYbgFs1pSGwoOJDz8v4FXkCYFf17pQkXMNgAcQD296XYmoigBPw4oZpsAFc3vN2t1UwUKE/dEHTXiXlWlOOJQURVmcTLK67/45jBMfi7q4V8QIcDZo4LccdgWBD/IjUbfTbXwCZp7jElfmlAAAAAElFTkSuQmCC"
+                                width="38" height="31" x="1219" y="1567" /></svg>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Easy Returns</h3>
+                            <p class="descr">Send back any products that don’t sell within 90 days</p>
+                        </div>
+                    </li>
+                    <li class="achievment col-sm-12 col-md-4">
+                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="390 1747 35 35">
+                            <image
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAD10lEQVRYR7WYX2gcVRSHv9+2SUWxVqqIiKUgIiJmZzeVVvGxCAUffCrNRtHUNrEgWnxrtU+19kERFUFTY4NoNqUIvgiFIvhmE+zuzEZEpBSkfRINlNqK3U3myJ3uppvJ/p3RfZude8/95txzf/ecI/r4Tfv+psGQ3ZLywCOILRibgY3AVcQixiXgVzMrVzOcHsvlrvS6hHoZWAyCx2S8ZsYu4MH6nOvAZUO3C9ti6FIGqxrcD9xRH3NZ4oyJjwqe93O3tTrCfDE/v3lg/eARpDH39W5BEZ4VOrcnl52WZLPl4C2Do4IjI3nvbTPTKb8yZtiTRuYZBxp5zWy6tlQ9+uL27YvtoNrCfFWq7MjIPgE8sIumzMmCN3TcATQbi8M0v3NgxWDhkCzcC3oICELTgeeHs3OtgFrCzJQrewQfg20CmyZcPlTYtu3PVgY6wTTGF8+fv4fMuuPgPKwrBq+O5rOn4vbWwEQgZieigRm9UchlpzrtdS8wK1B+ZR+hve+eTRqPA62Cubk1fIvZILCvMOyd7hZ0/cA4W8VSsBuYQqqGxrPNW7YCEwXrwIbvgMeRXunmkQZkvzARkPOQ2afAT7XajZ2NoF6BKZb8D5BeB5sq5HP7u3kkDUwEVPY/AzmoDwvDuYPuvwjG6QghP4D9Qbi8o12wJg3gVvPqQT0HupcMTzkdimBm/WDSjHGT3hzNZd/p1SvR3JjO9DN3xq8cltkxiRMjOW9CTuI3mBYMWSE3tDWuI92Mp4GJdMhf+E2YbsiGNFPyxyVN9hsraWNm5bjXY8fMJlQsBy6qJwQvj+S9k908EX+fxjP1bd5r8Dkw6WC+B54YyWXv7HeL0sZMJH5mmvUrfwE/qugHFzGqhbz3aL9e+S9gbh7z4BfEoPPM74ILI3nv6UQwJf+YSYcVKTfzSWyEaL+wjQ7mmsHcaN7bmcRQsRR8g3guydzYHEvtmfo1cg54GLgA9rXQ3/3A3fJMyphxizqg9QODXwrtMuzMUq36QqckKg7aHDOpTlPDcFKg1acppc40f2USoNlycEtn0ipw3OX9AjVu70iB095NrQK1V6CZhYW7tRSWgXXR3ZT21m53anoBWnNrp81nOh3hTkBt85kIKGGm101P2gG1zfQaWpEkB+4G00qHZJxFeq9tDuwmJakOeoGJAwE10NW21UHDaL91U68w9VA4iPQusGzopY510yqgHivKXmASV5QN473W2p1gnI6wbAdS1drN9023LkQcprkLAXJpydbUXYjmRTr1ZwSLIfyTgduA+/63/kz8q9d0ruAB4K56c+g64lqaztW/IzfM1KaffK4AAAAASUVORK5CYII="
+                                width="35" height="35" x="390" y="1747" /></svg>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Sector Trends</h3>
+                            <p class="descr">Reporting and data analytics on trends in your business sector</p>
+                        </div>
+                    </li>
+                    <li class="achievment col-sm-12 col-md-4">
+                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="793 1748 35 35">
+                            <image
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAADnklEQVRYR82YTYhbVRTHf+cl0xYrIrR+FNGFCwu1Ni8vwRHBlW4Utw4zb1qlCjMI0qlYUIS6sCgKFVsp6BS0aCcvY10qulFcCOJA8j7qB1SwC0VatQXRFtomeUduZhKTmGReJiPkbd+55/zuuef+z71XGOA7EQQ3boiZEBEH2I5wB8r1wGbgMsIllJ+BM6rqX7M4tTeb/TNpCEli6IXh3aLsU+Vh4PaVMTXgD9DfFakKmgbZCtwCpFZsfhHhMxXecm37+9Vi9YV5f2lpy1h6w0FE9gI3LAfnC1SXrJR8OmnbP3YGWAzDu+KaPoLIOPAgcBPwF6onKtVrh54YH7/YC6onzEI5us8SfRuwgXMCH2hcPezm8xdWm2Hjv1cqbRUrfUDhcWAbEMYqT+/OZb7p5qMrTMGPJgWOgW4R5KNqXJnbk8+fSwrRaXeyVNqWtsaOKvoYyEWFZ6adzGKn3X9g6iCqxxHGFF6dduxDa4XoHFfww4MCL6JUVGSmE6gNZnlp+AR0syKG/t31Amn4KfjRU4IeA7kcK4+2LlkTpl6sYxs/NzWi8NJ6ZqRHhl42NVSpXH2oUdRNGK8cHEFkztTIlJOZWO+MdPor+tGpeg2pHnVz2f3mfx3G6AgxXxvhqsXV3DDFmnQSpqhTVrpcF0yL+40O1WGKQTivyozA61OO/UJSh8PaFf3wNYXnRTg+lbVnxUj8RpXTwCbi6o5BdGRYGKNDWOkfgCtXRXdJoRzMiMg8sOg69tSwAQYd7/lhEZhU1Vnx/PAdYBbVZ91c9sigzoa198rBfkTeBOYNzJfAA5bFjm69xgT7uFS67m9JGdhXBg1eCKK5sUrqw4l7d57vNrbey2LMUn0lXhD+hLLJdezbegXy/PAw8Bxo0XWyblIgzw88ELP0b7iOfaCP/18RrpjM/AZ63nWymV7Gi1G0M67pApBJCtQCEmEx3e8I4flBBHKrgbmkcGbasXP9ZrxQOn2PZcUnkwC1gsSxtWd3fte3/XwX/LAssD1RZhqOkgANClIX3WZmEtRM66z6Aa0FZBkmbNbMqrupM8XdgNYK0r6b1qgzbUDCWZQ7gShJjbROrk1nhlHg9gwNDrKyRP8q8LC9yWz7WqxPpix5bzKT+S6pBtVBOnvTSHXtkTvP1IFG5aRnYEbqDGyARuZ20NgFI3NvagMahRtlsymOyl27ATQyrxBt/aP3+4w5mF1oeZ+5eeUJZP3fZzql/f9+ufoHHe+Cvhg0RbYAAAAASUVORK5CYII="
+                                width="35" height="35" x="793" y="1748" /></svg>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Low Minimums</h3>
+                            <p class="descr">Low opening order minimums for most makers</p>
+                        </div>
+                    </li>
+                    <li class="achievment col-sm-12 col-md-4">
+                        <svg width="44" height="28" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1220 1748 44 28">
+                            <image
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcCAYAAAAa/l2sAAAEVklEQVRYR9WYe4hUVRzHP787u+2uD7QCjcJXkclCztw7KxmFD5AKIlBQc2YM1KAkJaWoP5Jqe0AJQhZCGVhR7p1QSsUeVH/0AkGbufeOGxmuuiX6h9DDbM3VnTm/uOtuae3k3Lu7gfefgXvP95zPnPN7HqHvafP2zxLME8AsoKn//RD+Kkqglr6Qs+3tceeVUNjml9aI6kaQnwXdaVSPxZ2wmk5ErgLmAxNE5LGMndwQZw1xC8HtWHwFfGrOdS9eOnPmqTgT1aJ58/POxoYxv+0E5lW0Mu2+dPpQLboLx0jeD3aryq3m3JnrhxP2b9PzJgnWYVQ3ZdP22sjAbjE4JRb5jJ16MKp4q+c1L3Wc76Lq3GKwA2HOaFO+7p6Wlj+i6MX1AlXVZ3JpuzWKML+vfYLWVY5aWmlekk4fiKJ9NwjuMIZPVHR5zrbfiqKNDdxW9B8Qkc2ILsjadmiXNT+tqtbUoNSB8lPWSd1SsxCIBby5UKgfbdWdAK5E2Ja1U/dGWTQc6xb9xxFZr6J2zraD8N3uQmFEVyKRU8NIRcr1CXYsTqWOX+R0cUyizQueE1gX/mHAmIRMWppMRgqFb5dK4+oqveHzjayTWnk+vAabRFl1AWCQdVL2oID/Wkj5EOmNq6dBi1nHnh15lz3fBQlP5/c+7Shgbx1mflms9SjLgKPnv8kPWLoqskmcD4PMsxIyw1S0PXRYEXkazJys43wZBTrveS1KYvXFGv0+66RedIv+RkQeCq0W0QTK3cCPkYDbivvTIqYAPCqi76tKp1g4anQ7yBUH7eTkVhETBbra2D7gZVknNbbX5v3S86iuiwSc94IOhaaDdnLiTUEwMQQOnSYB9UZlnyBrMk7yleEAbiv6reFJ1gyc94IVCltEdG7Gtr/I+/7kfuDQy10v+BiYfWZE4/j7p03rt8nY7P/c4UjA2/bsaSo3jDiBEHptWM3xL+D29vH0VI4hvJO1Uytik/YJBwXsFv21iLwE9ABhKj0tcFZhimVxpxrzbTmRGJ0w+izKQq1YN+ZmTD8yGOhYwKEXG8uy6o3p7FFZAFxrCeMUGRfCCjgDQQk8aUQ/sCpWQ6YluTcOeCyncz3/EMgNwFmQI6ChbXYJnFTUgCxU+MaCc4o0gDaBNoJcA4wEjmWd1IRqwEMe1lwv2AIsU3hd0GZFRgk6hl44GoGrQX7R0ERUz/Sai/ArKocRXYHw3n+lbXegxCEUKpXyAsuqe0ogrCBrTxx9FVknsDNjJxeJiNZyvG4x2IqQsUxi6pKWmw8PpBm21Jz3gpUKr4IcEHQDolWdSWESyiMg0y/VBg1r8eMWS3ch+hohEJSBajtdH9qtiq7O2fauaqfxv5WXH3V0NJzo6qreUZ8c27187pTuS5nN4Ar4QbRIlwKrXicMokW67JrQrb5/m6XytSqfaU/3ouHsnIekze+tC7zSw4q+3H+RonA87EzjHvmA2W+oLlL6J79crqr+BB0g7NXGV2m7AAAAAElFTkSuQmCC"
+                                width="44" height="28" x="1220" y="1748" /></svg>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Unique Products</h3>
+                            <p class="descr">A variety of products from talented and quality Makers</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="how-works">
+            <div class="container">
+                <h2 class="section-title">How test works</h2>
+                <ul class="row d-flex flex-wrap justify-content-center pt-5">
+                    <li class="col-sm-12 col-md-10 col-lg-4 d-flex">
+                        <span class="section-title pr-3">01</span>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Select & Order</h3>
+                            <p class="descr">Select products from a wide variety of talented & quality Makers and place
+                                your order</p>
+                        </div>
+                    </li>
+                    <li class="col-sm-12 col-md-10 col-lg-4 d-flex">
+                        <span class="section-title pr-3">02</span>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Deliverd To Your Store</h3>
+                            <p class="descr">Items typically ship to your store from Makers within 48 hours of your
+                                order</p>
+                        </div>
+                    </li>
+                    <li class="col-sm-12 col-md-10 col-lg-4 d-flex">
+                        <span class="section-title pr-3">03</span>
+                        <div class="text-wrapper">
+                            <h3 class="subtitle">Test & Return</h3>
+                            <p class="descr">Test your selections with customers, you have 90 days to return it if it
+                                doesn't sell</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container-fluid row d-flex flex-wrap px-0">
+                <div class="px-0 col-12 col-md-12 col-lg-5 bg1">
+                </div>
+                <div class="col-12 col-md-12 col-lg-5 bg-gray">
+                    <h2>About Us</h2>
+                    <h3 class="section-title">We believe that <span class="d-block">small can be big</span></h3>
+                    <article>
+                        <p class="descr">Sparkinity was born because we believe in innovation. Data shows that small
+                            stores are better
+                            positioned than ever to take on retail giants as consumers increasingly seek curation and a
+                            personalised touch. Agility is a powerful weapon and we seek to empower the agile.</p>
+                        <p class="descr">​But to fulfil our vision we need to disrupt the age old system of distribution
+                            & wholesale.
+                            Our founding team has personal experiences & understanding of the expenses incurred , time
+                            and incredible effort that both buyers & makers make to connect. All because of the need to
+                            get a physical glimpse of that unicorn called the bestseller before risking an order.</p>
+                        <p class="descr">We are changing the buying process by providing retailers a medium to order
+                            online with free
+                            returns. Makers save on huge upfront costs for creating distribution networks & store owners
+                            can easily let their customers decide without taking on the risks involved with buying
+                            decisions.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 bg3 w-100">
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">How Test Works</h2>
+                <ul class="testimonial-list row d-flex flex-wrap justify-content-center justify-content-md-around">
+                    <li class="testimonial col-sm-12 col-md-4 justify-content-center">
+                        <img src="img/user_1.png" alt="User Pic 1">
+                        <h3 class="name">Joanna Booth</h3>
+                        <p class="descr">Looking forward to working with the Sparkinity team as they really understand the pressures
+                            of buying, I am looking for new products everyday and can't wait to try out their market
+                            test feature
+                        </p>
+                        <span>Owner of Space London</span>
+                    </li>
+                    <li class="testimonial col-sm-12 col-md-4 justify-content-center">
+                        <img src="img/user_2.png" alt="User Pic 2">
+                        <h3 class="name">Ryan Finer</h3>
+                        <p class="descr">As a small store we are constantly on our toes to delight our customers and keep them coming
+                            back for more. Its a very competitive market and finding unique products that work with our
+                            brand values & price architecture is hard. Sparkinity seems like a promising & valuable
+                            concep
+                        </p>
+                        <span>Owner of Workshop</span>
+                    </li>
+                    <li class="testimonial col-sm-12 col-md-4 justify-content-center">
+                        <img src="img/user_3.png" alt="User Pic 3">
+                        <h3 class="name">Chloe Smith</h3>
+                        <p class="descr">Having launched my home decor brand last year, I have been struggling with trade fairs and
+                        connecting with buyers as its so expensive and time consuming. Sparkinity is an amazing concept. I
+                        have been waiting for this for a long time
+                        </p>
+                        <span>Maker of ceramics</span>
+                    </li>
+                    <li class="testimonial col-sm-12 col-md-4 justify-content-center">
+                        <img src="img/user_3.png" alt="User Pic 3">
+                        <h3 class="name">Chloe Smith</h3>
+                        <p class="descr">Having launched my home decor brand last year, I have been struggling with trade fairs and
+                        connecting with buyers as its so expensive and time consuming. Sparkinity is an amazing concept. I
+                        have been waiting for this for a long time
+                        </p>
+                        <span>Maker of ceramics</span>
+                    </li>
+               </ul>
+            </div>
+        </section>
+        <section id="join-us">
+            <div
+                class="container-fluid row d-flex flex-wrap justify-content-lg-between justify-content-md-center px-0 gray-bg">
+                <div class="col-sm-12 col-md-10 offset-lg-2 offset-xl-3 col-lg-3 col-xl-2 content">
+                    <h2 class="section-title">Apply to join the community</h2>
+                    <p class="descr">We are here to make a difference !
+                        So whether you are a talented Maker or a Retailer drop us a line to join our platform. We would
+                        love to hear from you</p>
+                    <a href="#" class="btn-main">register interest</a>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 bg2"></div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="first-part d-flex flex-wrap justify-content-center justify-content-md-between">
+                <nav class="footer-nav mx-auto ml-md-0">
+                    <ul class="menu d-flex">
+                        <li class="menu-item ml-4 ml-md-0"><a class="menu-item-link" href="#">Home</a></li>
+                        <li class="menu-item"><a class="menu-item-link" href="#">About us</a></li>
+                        <li class="menu-item"><a class="menu-item-link" href="#">Team</a></li>
+                    </ul>
+                </nav>
+                <a class="invers-btn" href="#">Contact</a>
+            </div>
+            <div class="second-part d-flex flex-wrap justify-content-center justify-content-md-between">
+                <h1 class="site-title">
+                    <a class="logo" href="index.html">Site Logo</a>
+                </h1>
+                <ul class="info-link-list d-flex mt-4">
+                    <li class="info-link-item pl-2 pl-md-4">
+                        <a class="info-link" href="#">Terms & Condition</a>
+                    </li>
+                    <li class="info-link-item pl-2 pl-md-4">
+                        <a class="info-link" href="#">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/03c68ce9ed.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

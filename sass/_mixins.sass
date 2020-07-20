@@ -1,0 +1,21 @@
+@mixin cover-background 
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+@mixin btn
+  padding: 1em 2.5em
+  text-transform: uppercase
+  transition: ease-in 0.3s all
+  display: inline-block
+  background-color: $black
+  color: $white
+  font: bold 0.875rem $aleo-b
+  border: 2px solid transparent
+  &:hover
+    background-color: $white
+    border: 2px solid $black
+
+@mixin img-fluid
+  max-width: 100%
+  height: auto    

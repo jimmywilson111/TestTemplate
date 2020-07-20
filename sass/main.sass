@@ -1,0 +1,39 @@
+@import _reset.sass
+@import _fonts.sass
+@import _mixins.sass
+@import _variables.sass
+@import _media.sass
+@import _header.sass
+@import _footer.sass
+@import _index.sass
+
+#fullpage
+    .section-nav
+        position: fixed
+        z-index: 1000
+        top: 20%
+        right: 0
+        padding-right: 30px
+        li
+            margin: 1em 0
+            a
+                text-decoration: none
+                font: bold 1rem $aleo-b
+                color: $black
+                transition: all .3s ease-in
+                &:hover
+                    color: $gray
+            .active
+                margin-left: -30px
+                position: relative
+                color: $gray
+                &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    height: 1px
+                    width: 23px
+                    top: 10px
+                    right: -28px
+                    background-color: $gray
+                    
